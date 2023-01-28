@@ -11,6 +11,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <style>
+      #details-Container {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <header class="text-center m-3 text-primary">
@@ -18,10 +23,23 @@
     </header>
 
     <main>
+      <!-- search bar -->
       <section class="text-center m-3">
-        <input id="search-field" type="text" placeholder="Search your food">
-        <button onclick="searchFood()" class="btn btn-sm btn-primary">Search</button>
+        <input id="search-field" type="text" placeholder="Search your food" />
+        <button onclick="searchFood()" class="btn btn-sm btn-primary">
+          Search
+        </button>
       </section>
+
+      <section class="container text-center" id="details-Container">
+        <h3>Meal Details</h3>
+        <div
+          id="meal-details"
+          class="mb-3"
+          style="width: 18rem; margin: auto;"
+        ></div>
+      </section>
+
       <section class="container">
         <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
       </section>
